@@ -6,8 +6,9 @@ from agents.linkedin_lookup_agent import lookup as linkedin_lookup_agent
 
 if __name__ == "__main__":
 
-    linked_lookup_url = linkedin_lookup_agent(name = "ashwani solanki")
+    linked_lookup_url = linkedin_lookup_agent(name = "Ashwani Solanki")
     print(linked_lookup_url)
+
     summary = """
         given the information {information} about a person, I want you to create:
         1. A short  summary about the person
@@ -21,7 +22,7 @@ if __name__ == "__main__":
         temperature=0,
         model_name="gpt-3.5-turbo",
     )
-    # We fetch profile information of this person form linkedin web scraper and feed it into prompt template.
+    # We fetch profile information of this person form linkedIn web scraper and feed it into prompt template.
     profile_json = mock_scrape_linkedin_profile("Ashwani Solanki")
 
     chain = LLMChain(llm=llm, prompt=summary_prompt_template)
