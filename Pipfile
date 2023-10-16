@@ -8,6 +8,8 @@ black = "*"
 langchain = "*"
 openai = "*"
 google-search-results = "*"
+python-certifi-win32 = "*"
+tweepy = "*"
 
 [dev-packages]
 ipykernel = "*"
